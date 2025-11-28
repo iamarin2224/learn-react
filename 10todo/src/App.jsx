@@ -9,7 +9,7 @@ function App() {
   //we pass the todo, which is expected to have the value of text and completed, the '...' operator helps in spreading the existing var
   //we use prev as we need to know the prev array and modify over it
   const addTodo = (todo) => {
-    setTodos((prev) => [{id: Date.now(), ...todo} ,...prev])
+    setTodos((prev) => [...prev, {id: Date.now(), ...todo}])
   }
 
   //concise way to write the required, map fn modifies the given array
